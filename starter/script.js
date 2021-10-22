@@ -2,6 +2,7 @@
 //also we dont need to define 'strict mode' manually  becouse strict mode defined in modules ny default
 
 //here we will import
+//importing module pattern
 
 // import { addToCart, totalPrice, totalQuantity } from './shoppingCart.js'; //So remember that all the importing statements are basically hoisted to the top. even if we wrote them below some codes
 console.log('we are importing module'); //this to work we need to (connect module to html file)add atrubute  type to module in the html// type=module
@@ -62,3 +63,9 @@ Because if it was,then here we would simply get that empty array,
 */
 
 //note   imports are not copies of the export.They are instead like a live connection,and so what that means is that I point to the same placein memory,because again, otherwise, if it was a copy then here, we would not get anything in the array.
+
+// import goods from './modulePattern.js';
+// console.log(goods);
+import * as modulePattern from './modulePattern.js'; //we export all the module
+console.log(modulePattern);
+console.log(modulePattern.goods.orderStock('mele', 40));
