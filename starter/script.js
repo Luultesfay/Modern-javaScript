@@ -69,3 +69,6 @@ Because if it was,then here we would simply get that empty array,
 import * as modulePattern from './modulePattern.js'; //we export all the module
 console.log(modulePattern);
 console.log(modulePattern.goods.orderStock('mele', 40));
+
+//////271 coomonjs
+/////272  commandline practice
