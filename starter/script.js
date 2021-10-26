@@ -33,8 +33,8 @@ console.log(shoppingCart.totalPrice); //237
 //from default export
 //we can call what ever name that comes from default export  we will call it here add
 
-// import add from './shoppingCart.js'; //we also use here the same module ('./shoppingCart.js') twice   its not a problem but its not advisable
-// add('pizza', 3); //pizza, 3
+//import add from './shoppingCart.js'; //we also use here the same module ('./shoppingCart.js') twice   its not a problem but its not advisable
+add('pizza', 3); //pizza, 3
 
 //we can also mix  both named export and default export but its not advisable
 //what you probably should really not do is to mix Default and Named Exports like we did here, so avoid that to reduce complexity.
@@ -67,8 +67,26 @@ Because if it was,then here we would simply get that empty array,
 // import goods from './modulePattern.js';
 // console.log(goods);
 import * as modulePattern from './modulePattern.js'; //we export all the module
+
 console.log(modulePattern);
 console.log(modulePattern.goods.orderStock('mele', 40));
 
 //////271 coomonjs
 /////272  commandline practice
+
+import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+
+const state = {
+  cart: [
+    { product: 'bread', quantity: 4 },
+    { product: 'pizza', quantity: 4 },
+  ],
+  user: { loggedIn: true },
+};
+
+const stateClone = Object.assign({}, state);
+const stateClonedeep = cloneDeep(state);
+
+state.user.loggedIn = false;
+console.log(stateClone);
+console.log(stateClonedeep);
